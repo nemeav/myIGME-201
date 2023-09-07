@@ -16,9 +16,6 @@ namespace NVelazquez_Variables_and_Expression
     {
         static void Main(string[] args)
         {   
-            //boolean used for error handling later
-            bool bStatus = false;
-
             //store user input variables for later use
             string sNumOne = null;
             string sNumTwo = null;
