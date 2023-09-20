@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace PE8_Q5
 {
-    internal class Program
+    /* Author: Neme Velazquez
+     * Purpose: Store the values for 3 variables in an array given an equation
+     * Restrictions: none
+     */
+    static internal class Program
     {
+        /* Purpose: enter multiple variable into an equation and be able to store the results
+         * Restrictions: none
+         * Returns: new values of x, y, and z after being manipulated in equation
+         */
         static void Main(string[] args)
         {
-            double[,,] values = new double[21,21,21];
-            for (double d = -1; d <= 1; d += 0.1)
-            {
-                z
-            }
+            //variables - to store values from equation
+            int? x = null;
+            int? y = 1;
+            int? z = null;
+
+            double[,,] values;
+            
         }
     }
 }
