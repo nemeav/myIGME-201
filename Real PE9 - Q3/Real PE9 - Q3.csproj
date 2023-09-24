@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F322165C-440B-4845-8CE3-DD97BC74297A}</ProjectGuid>
+    <ProjectGuid>{DC08575F-B7CD-4207-B3FD-8DE35A32E5D1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PE9_Q3</RootNamespace>
-    <AssemblyName>PE9-Q3</AssemblyName>
+    <RootNamespace>Real_PE9___Q3</RootNamespace>
+    <AssemblyName>Real PE9 - Q3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\PE9-Q2.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
