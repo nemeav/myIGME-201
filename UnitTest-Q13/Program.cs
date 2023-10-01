@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace UnitTest_Q12
 {
     /* Author: Neme Velazquez
-     * Purpose: Create a program that gives person a raise based on name
+     * Purpose: Create a program that gives person a raise based on name (now with structs)
      * Restrictions: none
      */
     internal class Program
@@ -35,7 +35,7 @@ namespace UnitTest_Q12
             employee.sName = employee.sName.ToLower();
 
             //console messages/debugging for if person got raise or not
-            if (GiveRaise(employee.sName, ref employee.dSalary))
+            if (GiveRaise(ref employee))
             {
                 Console.WriteLine($"Congratulations, you got a raise! Your new salary is {employee.dSalary}!");
             }
@@ -46,16 +46,16 @@ namespace UnitTest_Q12
         }
 
         //function returns true or false based on user's input name
-        //parameters: name = user's name, salary = current salary and if earns raise
-        static bool GiveRaise(string name, ref double salary)
+        //parameter: only the struct with both values
+        static bool GiveRaise(ref Employee employee) //use ref so function manipulates original and not copy 
         {
-            switch (name)
+            switch (employee.sName)
             {
                 //use all my nicknames b/c I use different versions when debugging
                 case "nemesis":
                 case "neme":
                 case "nem":
-                    salary += 19999.99;
+                    employee.dSalary += 19999.99;
                     return true;
                 //if anyone's else name entered, no raise
                 default:
