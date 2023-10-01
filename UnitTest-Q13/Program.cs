@@ -12,29 +12,36 @@ namespace UnitTest_Q12
      */
     internal class Program
     {
+        //stores person's/user information and default salary info
+        public struct Employee
+        {
+            public string sName;
+            public double dSalary;
+        }
+
         /* Purpose: Ask user for name, call function to see if they get a raise, and print results to console
          * Restrictions: none
          * Returns: Results message with current/new salary value
          */
         static void Main(string[] args)
         {
-            //variables for storing user's name and default salary
-            string sName;
-            double dSalary = 30000;
+            //new employee instance and initializing salary variable
+            Employee employee = new Employee();
+            employee.dSalary = 30000;
 
             //user prompt for name - determines raise
             Console.WriteLine("Hello! What's your name? ");
-            sName = Console.ReadLine();
-            sName = sName.ToLower();
+            employee.sName = Console.ReadLine();
+            employee.sName = employee.sName.ToLower();
 
             //console messages/debugging for if person got raise or not
-            if (GiveRaise(sName, ref dSalary))
+            if (GiveRaise(employee.sName, ref employee.dSalary))
             {
-                Console.WriteLine($"Congratulations, you got a raise! Your new salary is {dSalary}!");
+                Console.WriteLine($"Congratulations, you got a raise! Your new salary is {employee.dSalary}!");
             }
             else
             {
-                Console.WriteLine($"Sorry, no raise this time. Your salary is {dSalary}.");
+                Console.WriteLine($"Sorry, no raise this time. Your salary is {employee.dSalary}.");
             }
         }
 
