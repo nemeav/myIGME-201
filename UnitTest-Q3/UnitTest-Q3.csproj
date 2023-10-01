@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27FB055E-2AE1-4A05-A0B5-7BC3FD0180A2}</ProjectGuid>
+    <ProjectGuid>{89B45E50-9E40-48F4-8572-013032C68E23}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>UnitTest_Q3</RootNamespace>
     <AssemblyName>UnitTest-Q3</AssemblyName>
