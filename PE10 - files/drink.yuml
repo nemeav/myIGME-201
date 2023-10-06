@@ -1,0 +1,23 @@
+// {type:class}
+// {generate:true}
+// {direction:topDown}
+
+//HotDrink + props + methods
+[A:HotDrink||Milk:string;Sugar:bool;+Drink();+AddMilk();+AddSugar()|]
+
+//ICup + props + methods
+[+I:ICup||Color:string;Volume:double;Refill();Wash()|]
+
+//CupOfCoffee + props + methods
+[CupOfCoffee||Color:string;Volume:double;BeanType:string;Refill();Wash()|]
+
+//CupOfTea  + props + methods
+[CupOfTea||Color:string;Volume:double;LeafType:string;Refill();Wash()|]
+
+//relationships/inheritance arrows
+[A:HotDrink]^-.-[CupOfCoffee]
+[A:HotDrink]^-.-[CupOfTea]
+
+[+I:ICup]^[CupOfCoffee]
+[+I:ICup]^[CupOfTea]
+
