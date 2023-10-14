@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB6DAD89-258E-4D60-9C84-671C0BD0C2F1}</ProjectGuid>
+    <ProjectGuid>{EEAE42C9-5300-48E1-9EF6-600EF6E4A1F0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>PeopleApp</RootNamespace>
     <AssemblyName>PeopleApp</AssemblyName>
@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CourseLib">
+      <HintPath>..\CourseLib\bin\Debug\CourseLib.dll</HintPath>
+    </Reference>
     <Reference Include="PeopleLib">
       <HintPath>..\PeopleLib\bin\Debug\PeopleLib.dll</HintPath>
     </Reference>

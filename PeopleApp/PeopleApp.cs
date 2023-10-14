@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using PeopleLib;
+using CourseLib;
 
 namespace PeopleApp
 {
@@ -12,6 +13,7 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
+            Courses courses = new Courses();
             // create our People SortedList!
             People people = new People();
 
@@ -118,6 +120,14 @@ namespace PeopleApp
                                 // gpa only belongs to Student, so we need a Student reference variable to output that
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
+                                
+                                foreach (string days in CourseLib.Schedule.daysOfWeek)
+                                {
+                                    foreach (string course in thisPerson.courseCodes)
+                                    {
+                                        Console.Write($"{course.schedule.startTime:hh:mmtt}");
+                                    }
+                                }
                             }
 
                             if (thisPerson.GetType() == typeof(Teacher))
@@ -150,6 +160,13 @@ namespace PeopleApp
         {
             // for each field, display the current value, if any
             // only replace the value if a new value was entered
+            string inputString;
+            do
+            {
+                Console.WriteLine("Enter a course code => ");
+                inputString = Console.ReadLine();
+                Student.courseCodes.Add(inputString);
+            } while (inputString.Length != 0);
 
             Console.Write($"Email ({thisPerson.email}) => ");
             string sEmail = Console.ReadLine();
