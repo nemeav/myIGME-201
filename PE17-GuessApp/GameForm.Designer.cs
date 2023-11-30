@@ -80,7 +80,7 @@
             // 
             this.toolStripProgressBar1.Maximum = 45;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(350, 16);
             this.toolStripProgressBar1.Value = 45;
             // 
             // timer1
